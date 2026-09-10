@@ -60,6 +60,11 @@ export default function Hero() {
       </section>
 
       <style>{`
+        /* ========================================
+           DESKTOP
+           ORIGINAL DESIGN — DO NOT CHANGE
+        ======================================== */
+
         .hero {
           min-height: calc(100vh - 70px);
           padding: 40px;
@@ -141,7 +146,6 @@ export default function Hero() {
           transform-origin: center;
         }
 
-
         .heroImage {
           display: block;
 
@@ -154,25 +158,208 @@ export default function Hero() {
           border-radius: 3px;
         }
 
+
+        /* ========================================
+           TABLET
+           801px — 1100px
+        ======================================== */
+
+        @media (max-width: 1100px) {
+          .hero {
+            gap: 35px;
+            padding: 35px;
+          }
+
+          .heroVisual {
+            width: min(100%, 560px);
+          }
+
+          .imageFrame {
+            height: 620px;
+          }
+
+          .title {
+            font-size: clamp(68px, 9vw, 115px);
+          }
+
+          .description {
+            max-width: 400px;
+            font-size: 17px;
+          }
+        }
+
+
+        /* ========================================
+           SMALL TABLET / MOBILE
+           601px — 800px
+        ======================================== */
+
         @media (max-width: 800px) {
           .hero {
             min-height: auto;
-            padding: 40px 20px 60px;
+
+            padding: 120px 30px 80px;
 
             grid-template-columns: 1fr;
+
+            gap: 60px;
+          }
+
+          .heroText {
+            width: 100%;
+          }
+
+          .eyebrow {
+            margin-bottom: 22px;
+
+            font-size: 12px;
+          }
+
+          .title {
+            font-size: clamp(72px, 13vw, 110px);
+
+            line-height: 0.88;
+          }
+
+          .description {
+            max-width: 500px;
+
+            margin-top: 32px;
+
+            font-size: 17px;
+          }
+
+          .scrollLink {
+            margin-top: 38px;
           }
 
           .heroVisual {
             width: 100%;
-            max-width: 500px;
+
+            max-width: 620px;
+
+            justify-self: center;
           }
 
           .imageFrame {
-            height: 550px;
+            height: min(620px, 85vw);
+          }
+        }
+
+
+        /* ========================================
+           MOBILE
+           501px — 600px
+        ======================================== */
+
+        @media (max-width: 600px) {
+          .hero {
+            padding: 105px 20px 70px;
+
+            gap: 45px;
           }
 
-          .accent {
-            right: -10px;
+          .title {
+            font-size: clamp(64px, 16vw, 90px);
+          }
+
+          .description {
+            margin-top: 28px;
+
+            font-size: 16px;
+
+            line-height: 1.5;
+          }
+
+          .scrollLink {
+            margin-top: 32px;
+
+            font-size: 12px;
+          }
+
+          .arrow {
+            font-size: 21px;
+          }
+
+          .heroVisual {
+            max-width: 520px;
+          }
+
+          .imageFrame {
+            height: 115vw;
+
+            max-height: 560px;
+          }
+        }
+
+
+        /* ========================================
+           SMALL PHONES
+           ≤ 500px
+        ======================================== */
+
+        @media (max-width: 500px) {
+          .hero {
+            padding: 100px 20px 60px;
+
+            gap: 38px;
+          }
+
+          .eyebrow {
+            margin-bottom: 20px;
+
+            font-size: 11px;
+          }
+
+          .title {
+            font-size: clamp(58px, 17vw, 78px);
+
+            line-height: 0.9;
+          }
+
+          .description {
+            max-width: 100%;
+
+            margin-top: 25px;
+
+            font-size: 15px;
+          }
+
+          .scrollLink {
+            margin-top: 28px;
+          }
+
+          .heroVisual {
+            max-width: 100%;
+          }
+
+          .imageFrame {
+            height: 110vw;
+
+            max-height: 480px;
+          }
+        }
+
+
+        /* ========================================
+           VERY SMALL PHONES
+           ≤ 380px
+        ======================================== */
+
+        @media (max-width: 380px) {
+          .hero {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+
+          .title {
+            font-size: 56px;
+          }
+
+          .imageFrame {
+            height: 105vw;
+
+            max-height: 430px;
           }
         }
       `}</style>

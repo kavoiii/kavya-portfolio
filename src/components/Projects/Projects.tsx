@@ -1128,46 +1128,46 @@ export default function Projects() {
            TABLET
         ================================= */
 
-        @media (max-width: 900px) {
+       @media (max-width: 900px) {
+  .work {
+    padding: 100px 20px 130px;
+  }
 
-          .work {
-            padding:
-              100px
-              20px
-              130px;
-          }
+  .sectionHeader {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
-          .sectionHeader {
-            grid-template-columns: 1fr;
+  .featuredContent {
+    grid-template-columns: 1fr;
 
-            gap: 30px;
-          }
+    gap: 0;
+  }
 
-          .sectionIntro {
-            margin: 0;
-          }
+  .featuredInfo {
+    padding: 60px 40px;
+  }
 
-          .featuredContent {
-            grid-template-columns: 1fr;
+  .miledgeVisual {
+    height: 570px;
 
-            min-height: auto;
-          }
+    width: 100%;
 
-          .featuredInfo {
-            padding:
-              50px
-              20px
-              0;
-          }
+    overflow: hidden;
+  }
 
-          .miledgeVisual {
-            height: 570px;
-          }
+  .secondaryProjects {
+    grid-template-columns: 1fr;
+  }
 
-          .secondaryProjects {
-            grid-template-columns: 1fr;
-          }
-        }
+  .secondaryImage {
+    height: 440px;
+  }
+
+  .realEstate .propertyGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 
 
         /* =================================
@@ -1175,92 +1175,74 @@ export default function Projects() {
         ================================= */
 
         @media (max-width: 600px) {
+  .work {
+    padding: 80px 20px 100px;
+  }
 
-          .work {
-            padding:
-              90px
-              20px
-              100px;
-          }
+  .featuredProject {
+    padding: 20px;
+  }
 
-          .featuredProject {
-            padding: 20px;
-          }
+  .featuredInfo {
+    padding: 35px 0 0;
+  }
 
-          .featuredInfo {
-            padding:
-              35px
-              0
-              0;
-          }
+  .featuredInfo h2 {
+    font-size: clamp(64px, 18vw, 80px);
+  }
 
-          .featuredInfo h3 {
-            font-size: 80px;
-          }
+  .miledgeVisual {
+    height: 470px;
 
-          .miledgeVisual {
-            height: 470px;
-          }
+    width: calc(100% + 40px);
+    margin-left: -20px;
 
-          .phone {
-            width: 175px;
-            height: 355px;
+    overflow: hidden;
+  }
 
-            border-radius: 25px;
-          }
+  .phone {
+    width: 175px;
+    height: 355px;
+  }
 
-          .phoneScreen {
-            border-radius: 18px;
-          }
+  .glow {
+    width: 300px;
+    height: 300px;
+  }
 
-          .phoneBack {
-            margin-left: 65px;
-          }
+  .visualLabel {
+    display: none;
+  }
 
-          .phoneFront {
-            margin-left: -60px;
-          }
+  .secondaryProjects {
+    grid-template-columns: 1fr;
+  }
 
-          .visualGlow {
-            width: 300px;
-            height: 300px;
-          }
+  .secondaryImage {
+    height: 330px;
+  }
 
-          .visualLabel {
-            display: none;
-          }
+  .realEstate {
+    padding: 20px;
+  }
 
-          .secondaryImage {
-            height: 330px;
-          }
+  .realEstate .propertyGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-          .realEstateVisual {
-            padding: 20px;
-          }
+  .secondaryMeta {
+    grid-template-columns: 1fr;
+  }
 
-          .secondaryMeta {
-            grid-template-columns: 1fr;
+  .secondaryBottom {
+    flex-direction: column;
+    gap: 25px;
+  }
 
-            gap: 20px;
-          }
-
-          .secondaryDescription {
-            max-width: 100%;
-          }
-
-          .secondaryBottom {
-            align-items: flex-start;
-
-            gap: 15px;
-
-            flex-direction: column;
-          }
-
-          .projectLinks {
-            align-self: flex-end;
-          }
-
-        }
+  .projectLinks {
+    align-self: flex-start;
+  }
+}
 
       `}</style>
     </>

@@ -498,103 +498,39 @@ export default function Contact() {
         }
 
 
-        /* ================================
-           TABLET
-        ================================= */
+        @media (max-width: 800px) {
+  .contact {
+    padding: 100px 30px;
+  }
 
-        @media (max-width: 900px) {
+  .contactContent {
+    width: 100%;
+  }
+}
 
-          .contact {
-            padding:
-              120px
-              25px
-              25px;
-          }
+@media (max-width: 600px) {
+  .contact {
+    padding: 80px 20px;
+  }
 
-          .contactIntro {
-            padding-left: 0;
-            padding-right: 0;
+  .contactHeading {
+    font-size: clamp(55px, 15vw, 90px);
+    line-height: 0.95;
+  }
 
-            margin-top: 70px;
-          }
+  .contactLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+}
 
-          .contactLinks {
-            margin-top: 100px;
-          }
-
-        }
-
-
-        /* ================================
-           MOBILE
-        ================================= */
-
-        @media (max-width: 600px) {
-
-          .contact {
-            min-height: auto;
-
-            padding:
-              100px
-              20px
-              25px;
-          }
-
-          .contactTop {
-            margin-bottom: 80px;
-          }
-
-          .contactAvailability {
-            display: none;
-          }
-
-          .contactHeading h2 {
-            font-size: 72px;
-          }
-
-          .contactIntro {
-            flex-direction: column;
-
-            align-items: flex-start;
-
-            gap: 35px;
-
-            margin-top: 60px;
-          }
-
-          .contactLinks {
-            margin-top: 100px;
-          }
-
-          .contactLink {
-            grid-template-columns:
-              0.35fr 1fr auto;
-
-            gap: 12px;
-          }
-
-          .linkValue {
-            font-size: 13px;
-          }
-
-          .contactFooter {
-            grid-template-columns: 1fr;
-
-            gap: 18px;
-
-            padding-top: 80px;
-          }
-
-          .contactFooter span:nth-child(2) {
-            text-align: left;
-          }
-
-          .backToTop {
-            justify-self: start;
-          }
-
-        }
-
+@media (max-width: 400px) {
+  .contact {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
       `}</style>
 
     </section>

@@ -489,17 +489,17 @@ export default function About() {
         ================================= */
 
         .aboutDescription {
-          display: grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-          grid-template-columns:
-            1fr 1fr;
+  gap: 120px;
 
-          gap: 120px;
+  margin-top: 120px;
 
-          margin-top: 120px;
+  padding-left: 25%;
 
-          padding-left: 25%;
-        }
+  min-width: 0;
+}
 
         .aboutStatement {
           max-width: 500px;
@@ -839,16 +839,34 @@ export default function About() {
         z-index: 5;
         }
         
-        /* ================================
-           TABLET
-        ================================= */
+        /* ---------- TABLET ---------- */
 
-        @media (max-width: 900px) {
+@media (max-width: 900px) {
+  .about {
+    padding: 120px 30px 140px;
+  }
+
+  .aboutIntro {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .aboutDescription {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    margin-top: 90px;
+
+    padding-left: 0;
+  }
 
   .personalSide {
     grid-template-columns: 1fr;
 
     gap: 40px;
+
+    padding-top: 40px;
   }
 
   .personalRight {
@@ -861,36 +879,71 @@ export default function About() {
 
   .artStack {
     height: 600px;
-
-    margin-top: 60px;
   }
-
 }
 
+/* ---------- MOBILE ---------- */
 
-        /* ================================
-           MOBILE
-        ================================= */
+@media (max-width: 600px) {
+  .about {
+    padding: 90px 20px 110px;
+  }
 
-        @media (max-width: 600px) {
+  .aboutIntro {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .aboutDescription {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    margin-top: 65px;
+
+    padding-left: 0;
+  }
+
+  .aboutInterlude {
+    height: 100px;
+
+    margin: 80px 0;
+  }
+
+  .personalSide {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding-top: 30px;
+  }
 
   .personalHeading h3 {
-    font-size: 65px;
+    font-size: clamp(48px, 14vw, 65px);
+    line-height: 0.95;
   }
 
   .personalRight {
-    min-height: 620px;
+    min-height: auto;
+  }
+
+  .personalText {
+    padding-top: 0;
   }
 
   .artStack {
+    width: 100%;
     height: 500px;
+
+    margin-top: 40px;
   }
 
   .artOne {
     width: 150px;
     height: 200px;
 
-    left: 5px;
+    left: 5%;
     top: 100px;
   }
 
@@ -898,26 +951,58 @@ export default function About() {
     width: 170px;
     height: 220px;
 
-    right: 10px;
-    top: 35px;
+    right: 5%;
+    top: 30px;
   }
 
   .artThree {
     width: 160px;
     height: 210px;
 
-    left: 90px;
+    left: 25%;
     top: 210px;
   }
+}
 
-  .artDoodle {
-    right: 5px;
-    bottom: 40px;
+/* ---------- SMALL PHONES ---------- */
 
-    width: 42px;
-    height: 42px;
+@media (max-width: 400px) {
+  .about {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
+  .aboutDescription {
+    gap: 28px;
+  }
+
+  .artStack {
+    height: 440px;
+  }
+
+  .artOne {
+    width: 125px;
+    height: 165px;
+
+    left: 2%;
+    top: 90px;
+  }
+
+  .artTwo {
+    width: 145px;
+    height: 185px;
+
+    right: 2%;
+    top: 20px;
+  }
+
+  .artThree {
+    width: 140px;
+    height: 185px;
+
+    left: 23%;
+    top: 185px;
+  }
 }
 
       `}</style>
