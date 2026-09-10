@@ -62,7 +62,7 @@ export default function Contact() {
         }}
       >
         <h2>
-          Let&apos;s make
+          Let`s make
           <br />
           something
           <br />
@@ -99,7 +99,7 @@ export default function Contact() {
         </p>
 
         <motion.a
-          href="mailto:YOUR_EMAIL_HERE"
+          href="mailto:kavyagauri2003@gmail.com"
           className="emailLink"
           whileHover={{
             x: 10,

@@ -199,24 +199,6 @@ export default function About() {
         }}
       >
 
-        <span className="interludeText">
-          CURIOUS BY DEFAULT
-        </span>
-
-        <motion.div
-          className="orbit"
-          animate={{
-            rotate: 360,
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        >
-          <span>✦</span>
-        </motion.div>
-
       </motion.div>
 
 
